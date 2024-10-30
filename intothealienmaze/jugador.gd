@@ -6,6 +6,9 @@ var speed: float = 100.0
 # Referencia al AnimationPlayer
 @onready var anim_player = $PlayerAnimation
 
+# Variable para almacenar la última dirección horizontal (1 para derecha, -1 para izquierda)
+var last_horizontal_direction: int = 1
+
 func _process(delta: float) -> void:
 	# Obtener la entrada del jugador
 	var input_vector = Vector2.ZERO
@@ -24,10 +27,16 @@ func _process(delta: float) -> void:
 	# Mover al jugador
 	position += input_vector * speed * delta
 
-	# Activar animación solo cuando se mueve hacia la derecha
-	if input_vector.x > 0:
-		if anim_player.current_animation != "rip_walk_right":
-			anim_player.play("rip_walk_right")
+	# Determinar la dirección horizontal y ajustar la animación y el giro del sprite
+	if input_vector.x != 0:
+		last_horizontal_direction = sign(input_vector.x)
+		anim_player.play("rip_walk_right")
+		
+		# Si la dirección es hacia la izquierda, voltear el sprite
+		flip_h = last_horizontal_direction == -1
+	elif input_vector.y != 0:
+		# Si se mueve verticalmente, reproducir la animación de caminar, pero sin cambiar el giro
+		anim_player.play("rip_walk_right")
 	else:
-		# Parar la animación si no se está moviendo a la derecha
+		# Si no hay movimiento, detener la animación
 		anim_player.stop()
