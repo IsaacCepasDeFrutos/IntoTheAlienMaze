@@ -56,6 +56,6 @@ libraries = {
 "": SubResource("AnimationLibrary_ow2l7")
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Player"]]
 position = Vector2(5, 0)
 shape = SubResource("CapsuleShape2D_38w06")
