@@ -18,9 +18,6 @@ func _ready() -> void:
 	player = get_node("/root/Node2D/Jugador")  # Cambia el path al de tu jugador
 	anim_player.play("walk_right")  # Asume que la animación de caminar se llama "walk_right"
 
-	# Conectar la señal de colisión
-	area.connect("body_entered", self, "_on_body_entered")
-
 func _process(delta: float) -> void:
 	if player:
 		# Calcula la dirección hacia el jugador
@@ -41,7 +38,7 @@ func _process(delta: float) -> void:
 		if anim_player.current_animation != "walk_right":
 			anim_player.play("walk_right")
 
-func _on_body_entered(body):
-	# Cambiar a la escena de Game Over si el alien choca con el jugador
-	if body.is_in_group("Player"):  # Asegúrate de que el jugador esté en el grupo "Player"
+# Función que se activa cuando `body_entered` detecta una colisión con el jugador
+func _on_area_2d_body_entered(body):
+	if body.is_in_group("Player"):
 		get_tree().change_scene("res://GameOver.tscn")
