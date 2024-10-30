@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://ctutjtgtow8dh"]
+
+[ext_resource type="Texture2D" uid="uid://bowh55jop0t6s" path="res://rip_andar.png" id="1_d1sy6"]
+[ext_resource type="Script" path="res://player_animation.gd" id="2_ucvrt"]
+
+[sub_resource type="Animation" id="Animation_b5tce"]
+resource_name = "rip_walk_right"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.133333, 0.2, 0.266667, 0.333333, 0.4, 0.466667, 0.533333, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+
+[sub_resource type="Animation" id="Animation_vwnfb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ow2l7"]
+_data = {
+"RESET": SubResource("Animation_vwnfb"),
+"rip_walk_right": SubResource("Animation_b5tce")
+}
+
+[node name="Jugador" type="Sprite2D"]
+texture_filter = 1
+position = Vector2(3, 3)
+texture = ExtResource("1_d1sy6")
+hframes = 10
+
+[node name="PlayerAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ow2l7")
+}
+script = ExtResource("2_ucvrt")
