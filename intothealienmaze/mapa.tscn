@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://dli2j71g5eg5g"]
+
+[ext_resource type="Texture2D" uid="uid://cwy7taasnn3mk" path="res://sprites/sprite/suelo1.png" id="1_qjnva"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iitvh"]
+size = Vector2(64, 64)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="TileMap"]
+position = Vector2(32, 24)
+texture = ExtResource("1_qjnva")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Sprite2D"]
+shape = SubResource("RectangleShape2D_iitvh")
+
+[node name="Sprite2D" type="Sprite2D" parent="TileMap/Sprite2D"]
+position = Vector2(0, 64)
+texture = ExtResource("1_qjnva")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Sprite2D/Sprite2D"]
+shape = SubResource("RectangleShape2D_iitvh")
