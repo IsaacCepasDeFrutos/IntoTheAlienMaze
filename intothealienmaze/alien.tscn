@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://beucq5myrvbh7"]
 
-[ext_resource type="Texture2D" uid="uid://bo52tp1osbvev" path="res://MovAlien.png" id="1_tddpc"]
+[ext_resource type="Texture2D" uid="uid://cwpygie3hdx72" path="res://MovAlien.png" id="1_tddpc"]
 [ext_resource type="Script" path="res://alien.gd" id="2_tthbf"]
 
 [sub_resource type="Animation" id="Animation_7vi3m"]
