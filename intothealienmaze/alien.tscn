@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://beucq5myrvbh7"]
+
+[ext_resource type="Texture2D" uid="uid://bo52tp1osbvev" path="res://MovAlien.png" id="1_tddpc"]
+[ext_resource type="Script" path="res://alien.gd" id="2_tthbf"]
+
+[sub_resource type="Animation" id="Animation_7vi3m"]
+resource_name = "walk_right"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.133333, 0.166667, 0.2, 0.233333, 0.266667, 0.3, 0.333333, 0.366667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+}
+
+[sub_resource type="Animation" id="Animation_6qs01"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lpya8"]
+_data = {
+"RESET": SubResource("Animation_6qs01"),
+"walk_right": SubResource("Animation_7vi3m")
+}
+
+[node name="Alien" type="Sprite2D"]
+texture_filter = 1
+texture = ExtResource("1_tddpc")
+hframes = 12
+script = ExtResource("2_tthbf")
+
+[node name="AlienAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_lpya8")
+}
