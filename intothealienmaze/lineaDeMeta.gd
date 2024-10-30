@@ -1,8 +1,5 @@
-eextends Area2D
+extends Area2D
 
-func _ready() -> void:
-	# Conectar la señal body_entered
-	connect("body_entered", self, "_on_meta_body_entered")
 
 func _on_meta_body_entered(body):
 	# Verificar si el cuerpo que entró es el jugador

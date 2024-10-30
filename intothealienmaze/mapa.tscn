@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dli2j71g5eg5g"]
+[gd_scene load_steps=34 format=3 uid="uid://dli2j71g5eg5g"]
 
 [ext_resource type="Texture2D" uid="uid://cwy7taasnn3mk" path="res://sprites/sprite/suelo1.png" id="1_qjnva"]
 [ext_resource type="Texture2D" uid="uid://by7bbh6llq0hu" path="res://sprites/sprite/pared_izquierda1.png" id="2_1nbas"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://bn8g60mti4188" path="res://sprites/sprite/muro1.png" id="3_tk7f7"]
 [ext_resource type="Texture2D" uid="uid://dopplri3ggl0l" path="res://sprites/sprite/pared_derecho1.png" id="4_b7amg"]
 [ext_resource type="Script" path="res://lineaDeMeta.gd" id="6_0qmwx"]
+[ext_resource type="PackedScene" path="res://jugador.tscn" id="7_mlwud"]
+[ext_resource type="PackedScene" path="res://alien.tscn" id="8_eq08o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kgeqb"]
 texture = ExtResource("1_qjnva")
@@ -207,5 +209,11 @@ script = ExtResource("6_0qmwx")
 
 [node name="CollisionShape2D19" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("SegmentShape2D_es6h2")
+
+[node name="Jugador" parent="." instance=ExtResource("7_mlwud")]
+position = Vector2(848, 464)
+
+[node name="Alien" parent="." instance=ExtResource("8_eq08o")]
+position = Vector2(840, 224)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_meta_body_entered"]
