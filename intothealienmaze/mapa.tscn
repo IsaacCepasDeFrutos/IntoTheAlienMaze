@@ -1,25 +1,65 @@
-[gd_scene load_steps=3 format=3 uid="uid://dli2j71g5eg5g"]
+[gd_scene load_steps=5 format=3 uid="uid://dli2j71g5eg5g"]
 
 [ext_resource type="Texture2D" uid="uid://cwy7taasnn3mk" path="res://sprites/sprite/suelo1.png" id="1_qjnva"]
+[ext_resource type="Texture2D" uid="uid://by7bbh6llq0hu" path="res://sprites/sprite/pared_izquierda1.png" id="2_1nbas"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iitvh"]
 size = Vector2(64, 64)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pl3wr"]
+size = Vector2(6.86956, 50.2545)
+
 [node name="Node2D" type="Node2D"]
+position = Vector2(72, 40)
 
 [node name="TileMap" type="TileMap" parent="."]
 format = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="TileMap"]
-position = Vector2(32, 24)
+[node name="Sprite2D2" type="Sprite2D" parent="TileMap"]
+position = Vector2(-120, 104)
 texture = ExtResource("1_qjnva")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Sprite2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Sprite2D2"]
 shape = SubResource("RectangleShape2D_iitvh")
 
-[node name="Sprite2D" type="Sprite2D" parent="TileMap/Sprite2D"]
-position = Vector2(0, 64)
-texture = ExtResource("1_qjnva")
+[node name="Sprite2D3" type="Sprite2D" parent="TileMap"]
+position = Vector2(72, 232)
+scale = Vector2(1.64286, 3.50926)
+texture = ExtResource("2_1nbas")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Sprite2D/Sprite2D"]
-shape = SubResource("RectangleShape2D_iitvh")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Sprite2D3"]
+position = Vector2(0, 2.3304)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_pl3wr")
+
+[node name="Sprite2D4" type="Sprite2D" parent="TileMap"]
+position = Vector2(168, 320)
+rotation = 1.5708
+scale = Vector2(1.64286, 3.50926)
+texture = ExtResource("2_1nbas")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Sprite2D4"]
+position = Vector2(0, 2.3304)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_pl3wr")
+
+[node name="Sprite2D5" type="Sprite2D" parent="TileMap"]
+position = Vector2(168, 152)
+rotation = 1.5708
+scale = Vector2(1.64286, 3.50926)
+texture = ExtResource("2_1nbas")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Sprite2D5"]
+position = Vector2(0, 2.3304)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_pl3wr")
+
+[node name="Sprite2D6" type="Sprite2D" parent="TileMap"]
+position = Vector2(248, 232)
+scale = Vector2(1.64286, 3.50926)
+texture = ExtResource("2_1nbas")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Sprite2D6"]
+position = Vector2(0, 2.3304)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_pl3wr")
