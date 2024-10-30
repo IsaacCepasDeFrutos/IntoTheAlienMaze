@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://m78fb8lujt8c"]
+[gd_scene load_steps=7 format=3 uid="uid://bywbd4a1agecy"]
 
 [ext_resource type="Texture2D" uid="uid://bowh55jop0t6s" path="res://rip_andar.png" id="1_d1sy6"]
 [ext_resource type="Script" path="res://jugador.gd" id="2_myr7k"]
@@ -40,22 +40,24 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_38w06"]
-radius = 7.0
+radius = 8.0
 height = 46.0
 
-[node name="Jugador" type="Sprite2D"]
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(257, 150)
+script = ExtResource("2_myr7k")
+
+[node name="Jugador" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(487, 252)
 texture = ExtResource("1_d1sy6")
 hframes = 10
 frame = 9
-script = ExtResource("2_myr7k")
 
-[node name="PlayerAnimation" type="AnimationPlayer" parent="."]
+[node name="PlayerAnimation" type="AnimationPlayer" parent="Jugador"]
 libraries = {
 "": SubResource("AnimationLibrary_ow2l7")
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Player"]]
-position = Vector2(5, 0)
+position = Vector2(2, -3)
 shape = SubResource("CapsuleShape2D_38w06")
