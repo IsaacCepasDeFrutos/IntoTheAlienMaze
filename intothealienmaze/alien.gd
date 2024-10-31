@@ -1,7 +1,7 @@
 extends Sprite2D
 
 # Velocidad de movimiento del enemigo
-var speed: float = 50.0
+var speed: float = 79.0
 
 # Referencia al nodo del jugador
 var player: Node2D

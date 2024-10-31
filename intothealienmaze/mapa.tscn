@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://dli2j71g5eg5g"]
+[gd_scene load_steps=39 format=3 uid="uid://dli2j71g5eg5g"]
 
 [ext_resource type="Texture2D" uid="uid://cwy7taasnn3mk" path="res://sprites/sprite/suelo1.png" id="1_qjnva"]
 [ext_resource type="Texture2D" uid="uid://by7bbh6llq0hu" path="res://sprites/sprite/pared_izquierda1.png" id="2_1nbas"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://iyiolytquu2e" path="res://alien.tscn" id="8_eq08o"]
 [ext_resource type="PackedScene" uid="uid://86yn5nieb28n" path="res://GameOver.tscn" id="10_dpv8g"]
 [ext_resource type="PackedScene" uid="uid://c7nyc0qo1xaa8" path="res://YouWin.tscn" id="11_2y8kn"]
+[ext_resource type="AudioStream" uid="uid://o8lgqpjkbk0s" path="res://Happy Wheels victory green screen.mp3" id="12_hlswx"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gncsc"]
 
@@ -245,7 +246,14 @@ position = Vector2(840, 224)
 [node name="GameOver" parent="." instance=ExtResource("10_dpv8g")]
 position = Vector2(-1281, -49)
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="GameOver"]
+position = Vector2(1281, 49)
+
 [node name="YouWin" parent="." groups=["Player"] instance=ExtResource("11_2y8kn")]
 position = Vector2(987, -56)
+
+[node name="AudioPlayer" type="AudioStreamPlayer2D" parent="YouWin"]
+position = Vector2(1281, 49)
+stream = ExtResource("12_hlswx")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_meta_body_entered"]

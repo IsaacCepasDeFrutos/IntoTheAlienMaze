@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://o8lgqpjkbk0s"
+path="res://.godot/imported/Happy Wheels victory green screen.mp3-75b72659b554259613a8892cf3c69c79.mp3str"
+
+[deps]
+
+source_file="res://Happy Wheels victory green screen.mp3"
+dest_files=["res://.godot/imported/Happy Wheels victory green screen.mp3-75b72659b554259613a8892cf3c69c79.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
