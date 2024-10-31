@@ -8,7 +8,7 @@
 [ext_resource type="Script" path="res://lineaDeMeta.gd" id="6_0qmwx"]
 [ext_resource type="Script" path="res://colliderEscenario.gd" id="6_egy3b"]
 [ext_resource type="PackedScene" uid="uid://bywbd4a1agecy" path="res://jugador.tscn" id="7_mlwud"]
-[ext_resource type="PackedScene" path="res://alien.tscn" id="8_eq08o"]
+[ext_resource type="PackedScene" uid="uid://iyiolytquu2e" path="res://alien.tscn" id="8_eq08o"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gncsc"]
 
