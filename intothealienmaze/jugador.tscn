@@ -43,7 +43,7 @@ _data = {
 radius = 8.0
 height = 46.0
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["Player"]]
 position = Vector2(257, 150)
 script = ExtResource("2_myr7k")
 

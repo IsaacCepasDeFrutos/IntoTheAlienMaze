@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://dli2j71g5eg5g"]
+[gd_scene load_steps=38 format=3 uid="uid://dli2j71g5eg5g"]
 
 [ext_resource type="Texture2D" uid="uid://cwy7taasnn3mk" path="res://sprites/sprite/suelo1.png" id="1_qjnva"]
 [ext_resource type="Texture2D" uid="uid://by7bbh6llq0hu" path="res://sprites/sprite/pared_izquierda1.png" id="2_1nbas"]
@@ -9,6 +9,8 @@
 [ext_resource type="Script" path="res://colliderEscenario.gd" id="6_egy3b"]
 [ext_resource type="PackedScene" uid="uid://bywbd4a1agecy" path="res://jugador.tscn" id="7_mlwud"]
 [ext_resource type="PackedScene" uid="uid://iyiolytquu2e" path="res://alien.tscn" id="8_eq08o"]
+[ext_resource type="PackedScene" uid="uid://86yn5nieb28n" path="res://GameOver.tscn" id="10_dpv8g"]
+[ext_resource type="PackedScene" uid="uid://c7nyc0qo1xaa8" path="res://YouWin.tscn" id="11_2y8kn"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gncsc"]
 
@@ -239,5 +241,11 @@ position = Vector2(848, 464)
 
 [node name="Alien" parent="." instance=ExtResource("8_eq08o")]
 position = Vector2(840, 224)
+
+[node name="GameOver" parent="." instance=ExtResource("10_dpv8g")]
+position = Vector2(-1281, -49)
+
+[node name="YouWin" parent="." groups=["Player"] instance=ExtResource("11_2y8kn")]
+position = Vector2(987, -56)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_meta_body_entered"]

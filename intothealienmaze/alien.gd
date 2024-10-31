@@ -26,19 +26,18 @@ func _process(delta: float) -> void:
 		# Mueve al enemigo hacia el jugador
 		position += direction * speed * delta
 
-		# Determinar si hay movimiento horizontal y girar hacia el jugador
+		# Determina si el enemigo se mueve horizontalmente para ajustar la dirección de la animación
 		if direction.x != 0:
 			last_horizontal_direction = sign(direction.x)
 			flip_h = last_horizontal_direction == -1
-		elif direction.y != 0:
-			# Si se mueve verticalmente, seguir reproduciendo la animación sin cambiar la orientación
-			anim_player.play("walk_right")
 
-		# Reproduce la animación si no está ya reproduciéndose
+		# Reproduce la animación solo si cambia de dirección
 		if anim_player.current_animation != "walk_right":
 			anim_player.play("walk_right")
 
 # Función que se activa cuando `body_entered` detecta una colisión con el jugador
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("Player"):
-		get_tree().change_scene("res://GameOver.tscn")
+		print(body.name)
+		get_tree().change_scene_to_file("res://GameOver.tscn")
+		
