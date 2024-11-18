@@ -5,7 +5,7 @@
 
 
 ## 🎮 **Descripción del Proyecto**
-Este juego fue creado por **[Isaac Cepas de Frutos](https://github.com/IsaacCepasDeFrutos)** y **[Daniel](https://github.com/displayboi)** como un desafío académico.
+Este juego fue creado por **[Isaac Cepas de Frutos](https://github.com/IsaacCepasDeFrutos)** y **[Daniel Canales Ramos](https://github.com/displayboi)** como un desafío académico.
  El objetivo era desarrollar un programa utilizando una tecnología completamente nueva para nosotros en solo 24 horas.  
 
 Decidimos emplear **Godot Engine 4.3** debido a su potencia y facilidad de aprendizaje, y conseguimos terminar el juego a tiempo. Durante este proceso, aprendimos a manejar GDScript, diseñar escenas y programar una inteligencia artificial básica.
@@ -49,7 +49,7 @@ Welcome to **Into The Alien Maze**! A game developed in **Godot 4.3** using **GD
 ![YouWin](https://github.com/user-attachments/assets/4c4f88f7-0a33-45b1-907c-32b3e098e015)
 
 ## 🎮 **Project Description**
-This game was created by **[Isaac Cepas de Frutos](https://github.com/IsaacCepasDeFrutos)** and **[Daniel](https://github.com/displayboi)** as an academic challenge.  
+This game was created by **[Isaac Cepas de Frutos](https://github.com/IsaacCepasDeFrutos)** and **[Daniel Canales Ramos](https://github.com/displayboi)** as an academic challenge.  
 The objective was to develop a program using a completely new technology for us in just 24 hours.
 
 We chose **Godot Engine 4.3** because of its power and ease of use, and we managed to complete the game on time. During the process, we learned to work with GDScript, design scenes, and program basic artificial intelligence.
