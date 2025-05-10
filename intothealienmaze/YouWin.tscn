@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7nyc0qo1xaa8"]
+
+[ext_resource type="Texture2D" uid="uid://b14gpljlg41xf" path="res://YouWin.jpg" id="1_0an36"]
+[ext_resource type="Script" path="res://you_win.gd" id="2_22leq"]
+
+[node name="YouWin" type="Node2D"]
+
+[node name="YouWin" type="Sprite2D" parent="."]
+position = Vector2(580, 342)
+scale = Vector2(1.19804, 1.1394)
+texture = ExtResource("1_0an36")
+script = ExtResource("2_22leq")
